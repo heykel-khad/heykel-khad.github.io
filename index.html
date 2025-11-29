@@ -499,4 +499,1202 @@
 
     @media (max-width: 900px) {
       .gallery-grid {
-        grid-temp
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 10px;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12px;
+    }
+
+    .gallery-card img {
+      border-radius: 14px;
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .gallery-card strong {
+      font-size: 13px;
+    }
+
+    .gallery-card span {
+      color: var(--muted);
+    }
+
+    /* PRICING + FORM */
+    .pricing {
+      background: #ffffff;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #e5e7eb;
+    }
+
+    .pricing-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 13px;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    .pricing-list strong {
+      color: #111827;
+    }
+
+    .pricing-form {
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 12px;
+    }
+
+    .field-group {
+      display: grid;
+      gap: 4px;
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    input, textarea, select {
+      font-family: inherit;
+      font-size: 12px;
+      padding: 8px 9px;
+      border-radius: 12px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      background: #f9fafb;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(91, 33, 255, 0.2);
+      background: #ffffff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-form {
+      margin-top: 6px;
+      border-radius: 999px;
+      border: none;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--primary);
+      color: #f9fafb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+
+    .btn-form:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 32px rgba(15,23,42,0.4);
+    }
+
+    .form-note {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .form-note span.icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .pricing-image {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pricing-image img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      background: var(--bg-alt);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 12px 12px 14px;
+      border: 1px solid #e5e7eb;
+      box-shadow: var(--shadow-subtle);
+      font-size: 12px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .testimonial-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .testimonial-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .testimonial-text {
+      color: #4b5563;
+    }
+
+    .testimonial-stars {
+      font-size: 11px;
+      color: #f59e0b;
+    }
+
+    /* TEAM */
+    .team {
+      background: #ffffff;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .team-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .team-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 10px 10px 12px;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .team-card img {
+      border-radius: 14px;
+      height: 210px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .team-name {
+      font-weight: 600;
+    }
+
+    .team-role {
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    /* FINAL CTA */
+    .cta {
+      background: var(--bg-alt);
+    }
+
+    .cta-inner {
+      background: var(--primary);
+      border-radius: 28px;
+      padding: 24px 20px;
+      color: #f9fafb;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 18px;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (max-width: 900px) {
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cta-title {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .cta-text {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 14px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-outline {
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+    }
+
+    .btn-cta-primary {
+      background: #fbbf24;
+      color: #1f2937;
+      box-shadow: 0 14px 30px rgba(15,23,42,0.45);
+    }
+
+    .btn-cta-primary:hover {
+      background: #fde68a;
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-outline {
+      background: transparent;
+      border: 1px solid rgba(249,250,251,0.6);
+      color: #e5e7eb;
+    }
+
+    .btn-cta-outline:hover {
+      background: rgba(249,250,251,0.1);
+    }
+
+    .cta-image {
+      border-radius: 22px;
+      overflow: hidden;
+      background: #111827;
+      box-shadow: 0 24px 50px rgba(15,23,42,0.65);
+    }
+
+    .cta-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 24px 16px 30px;
+      margin-top: 30px;
+    }
+
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .footer small {
+      color: #9ca3af;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 4px;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      font-size: 12px;
+    }
+
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 12px auto 0;
+      border-top: 1px solid rgba(55,65,81,0.9);
+      padding-top: 10px;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      color: #9ca3af;
+    }
+
+    .footer-bottom a {
+      color: #e5e7eb;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-style: dotted;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 16px 36px rgba(15,23,42,0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms ease, transform 200ms ease;
+      z-index: 50;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, -6px);
+      pointer-events: auto;
+    }
+
+    .toast span.icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #22c55e;
+    }
+  </style>
+</head>
+
+<body data-lang="en">
+  <div class="top-bar">
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">🐾</div>
+        <div>
+          <div class="logo-text-main">Pawcare</div>
+          <div class="logo-text-sub">
+            <span class="lang-text" data-lang="en">Pet Sitting & Dog Walking</span>
+            <span class="lang-text" data-lang="de">Haustierbetreuung & Gassi-Service</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#hero"><span class="lang-text" data-lang="en">Home</span><span class="lang-text" data-lang="de">Start</span></a></li>
+          <li><a href="#why"><span class="lang-text" data-lang="en">Why Pawcare</span><span class="lang-text" data-lang="de">Warum Pawcare</span></a></li>
+          <li><a href="#pricing"><span class="lang-text" data-lang="en">Pricing</span><span class="lang-text" data-lang="de">Preise</span></a></li>
+          <li><a href="#testimonials"><span class="lang-text" data-lang="en">Reviews</span><span class="lang-text" data-lang="de">Bewertungen</span></a></li>
+          <li><a href="#team"><span class="lang-text" data-lang="en">Team</span><span class="lang-text" data-lang="de">Team</span></a></li>
+          <li><a href="#contact"><span class="lang-text" data-lang="en">Contact</span><span class="lang-text" data-lang="de">Kontakt</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-set-lang="en">EN</button>
+          <button class="lang-btn" data-set-lang="de">DE</button>
+        </div>
+        <button class="btn-nav" onclick="scrollToContact()">
+          <span class="lang-text" data-lang="en">Book now</span>
+          <span class="lang-text" data-lang="de">Jetzt anfragen</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <div class="hero-pill">
+          <span class="tag">New</span>
+          <span class="lang-text" data-lang="en">Trusted pet sitting in the Munich area</span>
+          <span class="lang-text" data-lang="de">Vertrauensvolle Haustierbetreuung im Raum München</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="lang-text" data-lang="en">Your Pet’s Home Away From Home</span>
+          <span class="lang-text" data-lang="de">Ein zweites Zuhause für Ihr Tier</span>
+        </h1>
+
+        <p class="hero-subtitle block-lang" data-lang="en">
+          Providing loving care so your furry friends relax while you’re away. Sit back, enjoy your trip and
+          receive daily updates straight to your phone.
+        </p>
+        <p class="hero-subtitle block-lang" data-lang="de">
+          Liebevolle Betreuung, damit Ihre Fellfreunde entspannt bleiben, während Sie unterwegs sind.
+          Lehnen Sie sich zurück und erhalten Sie tägliche Updates direkt aufs Handy.
+        </p>
+
+        <form class="hero-form" onsubmit="handleHeroSubmit(event)">
+          <input type="email" placeholder="you@example.com" required />
+          <button class="btn-hero" type="submit">
+            <span class="lang-text" data-lang="en">Get availability</span>
+            <span class="lang-text" data-lang="de">Verfügbarkeit prüfen</span>
+          </button>
+        </form>
+
+        <p class="hero-note">
+          <span class="lang-text" data-lang="en">No spam, just one friendly reply from Heykel within 24 hours.</span>
+          <span class="lang-text" data-lang="de">Kein Spam – nur eine freundliche Antwort von Heykel innerhalb von 24 Stunden.</span>
+        </p>
+
+        <div class="hero-image-wrap">
+          <img src="https://images.pexels.com/photos/5486950/pexels-photo-5486950.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Happy woman with dogs on the couch" />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main class="page-wrap">
+    <!-- BRANDS -->
+    <section class="brands">
+      <div class="brands-inner">
+        <span class="lang-text" data-lang="en">Trusted by caring pet owners and brands worldwide.</span>
+        <span class="lang-text" data-lang="de">Vertrauen von Tierhalter*innen und Marken weltweit.</span>
+        <div class="brands-logos">
+          <span>Paws&Co</span>
+          <span>HappyPets</span>
+          <span>BlueTail</span>
+          <span>RoyalCare</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section id="why" class="section why">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Why choose us</span>
+          <span class="lang-text" data-lang="de">Warum wir</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">Why Pawcare Babysitting?</span>
+          <span class="lang-text" data-lang="de">Warum Pawcare für Ihr Tier?</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          We combine professional reliability with a genuinely caring approach – so you and your pet both feel relaxed.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Wir verbinden professionelle Zuverlässigkeit mit echter Zuneigung – damit Sie und Ihr Tier entspannt sein können.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-img-large">
+          <img src="https://images.pexels.com/photos/7210260/pexels-photo-7210260.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman hugging dog by the window" />
+        </div>
+        <div class="why-text-block">
+          <div class="why-item">
+            <h3>
+              <span class="lang-text" data-lang="en">Personalized care for every pet</span>
+              <span class="lang-text" data-lang="de">Individuelle Betreuung für jedes Tier</span>
+            </h3>
+            <p class="block-lang" data-lang="en">
+              From playful puppies to shy senior cats – I adapt routines, playtime and walks to your pet’s unique personality.
+            </p>
+            <p class="block-lang" data-lang="de">
+              Vom verspielten Welpen bis zur schüchternen Senior-Katze – ich passe Abläufe, Spielzeit und Spaziergänge an den Charakter Ihres Tieres an.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <h3>
+              <span class="lang-text" data-lang="en">Experienced & insured sitter</span>
+              <span class="lang-text" data-lang="de">Erfahrener & versicherter Sitter</span>
+            </h3>
+            <p class="block-lang" data-lang="en">
+              Over 4 years of hands-on experience with dogs, cats and small animals, plus full insurance and basic emergency training.
+            </p>
+            <p class="block-lang" data-lang="de">
+              Über 4 Jahre praktische Erfahrung mit Hunden, Katzen und Kleintieren – dazu Versicherungsschutz und Grundkenntnisse in Notfallmaßnahmen.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <h3>
+              <span class="lang-text" data-lang="en">Clear communication & updates</span>
+              <span class="lang-text" data-lang="de">Klare Kommunikation & Updates</span>
+            </h3>
+            <p class="block-lang" data-lang="en">
+              You receive friendly photo and video updates after every visit or walk – so you always know how your pet is doing.
+            </p>
+            <p class="block-lang" data-lang="de">
+              Nach jedem Besuch oder Spaziergang erhalten Sie freundliche Foto- und Videoupdates – so wissen Sie immer, wie es Ihrem Tier geht.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Our commitment</span>
+          <span class="lang-text" data-lang="de">Unser Versprechen</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">Happy, relaxed pets – every time</span>
+          <span class="lang-text" data-lang="de">Glückliche, entspannte Tiere – jedes Mal</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          We treat every animal as if they were our own – with patience, kindness and lots of play.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Wir behandeln jedes Tier, als wäre es unser eigenes – mit Geduld, Freundlichkeit und ganz viel Spielzeit.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/9773281/pexels-photo-9773281.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog running on the beach" />
+          <strong>Daily</strong>
+          <span class="lang-text" data-lang="en">Fresh air & movement</span>
+          <span class="lang-text" data-lang="de">Frische Luft & Bewegung</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/4588012/pexels-photo-4588012.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog and cat together" />
+          <strong>Safe</strong>
+          <span class="lang-text" data-lang="en">Comfortable at home</span>
+          <span class="lang-text" data-lang="de">Geborgen zu Hause</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cat playing" />
+          <strong>Play</strong>
+          <span class="lang-text" data-lang="en">Mental stimulation</span>
+          <span class="lang-text" data-lang="de">Geistige Auslastung</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/5731860/pexels-photo-5731860.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog portrait" />
+          <strong>Care</strong>
+          <span class="lang-text" data-lang="en">Gentle handling</span>
+          <span class="lang-text" data-lang="de">Liebevolle Betreuung</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog at park" />
+          <strong>Fun</strong>
+          <span class="lang-text" data-lang="en">New smells & routes</span>
+          <span class="lang-text" data-lang="de">Neue Wege & Gerüche</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.pexels.com/photos/3820609/pexels-photo-3820609.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Rabbit" />
+          <strong>Gentle</strong>
+          <span class="lang-text" data-lang="en">Small pets welcome</span>
+          <span class="lang-text" data-lang="de">Auch Kleintiere willkommen</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING + FORM -->
+    <section id="pricing" class="section pricing">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Transparent pricing</span>
+          <span class="lang-text" data-lang="de">Transparente Preise</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">Simple, clear packages</span>
+          <span class="lang-text" data-lang="de">Einfache, klare Pakete</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          No surprises – you always know what’s included. Tell me what you need and I’ll send a tailored offer.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Keine Überraschungen – Sie wissen immer, was enthalten ist. Schreiben Sie mir, was Sie brauchen, und ich sende Ihnen ein individuelles Angebot.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card" id="contact">
+          <h3>
+            <span class="lang-text" data-lang="en">Request your personal quote</span>
+            <span class="lang-text" data-lang="de">Persönliches Angebot anfordern</span>
+          </h3>
+          <ul class="pricing-list">
+            <li>
+              <span class="lang-text" data-lang="en"><strong>Home visits</strong> from €15 / visit</span>
+              <span class="lang-text" data-lang="de"><strong>Hausbesuche</strong> ab 15 € / Besuch</span>
+            </li>
+            <li>
+              <span class="lang-text" data-lang="en"><strong>Dog walks</strong> from €18 / walk</span>
+              <span class="lang-text" data-lang="de"><strong>Gassi-Service</strong> ab 18 € / Spaziergang</span>
+            </li>
+            <li>
+              <span class="lang-text" data-lang="en"><strong>Overnight stays</strong> from €65 / night</span>
+              <span class="lang-text" data-lang="de"><strong>Übernacht-Betreuung</strong> ab 65 € / Nacht</span>
+            </li>
+          </ul>
+
+          <form class="pricing-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="field-group">
+                <label for="name">
+                  <span class="lang-text" data-lang="en">First & last name</span>
+                  <span class="lang-text" data-lang="de">Vor- & Nachname</span>
+                </label>
+                <input id="name" name="name" type="text" placeholder="z.B. Anna Müller" required />
+              </div>
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field-group">
+                <label for="phone">
+                  <span class="lang-text" data-lang="en">Phone (optional)</span>
+                  <span class="lang-text" data-lang="de">Telefon (optional)</span>
+                </label>
+                <input id="phone" name="phone" type="tel" placeholder="+49 ..." />
+              </div>
+              <div class="field-group">
+                <label for="service">
+                  <span class="lang-text" data-lang="en">Service</span>
+                  <span class="lang-text" data-lang="de">Leistung</span>
+                </label>
+                <select id="service" name="service">
+                  <option>Home visits / Hausbesuche</option>
+                  <option>Dog walking / Gassi-Service</option>
+                  <option>Overnight stays / Übernacht-Betreuung</option>
+                  <option>Medication / Spezialpflege</option>
+                  <option>Not sure yet / Noch unsicher</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="message">
+                <span class="lang-text" data-lang="en">Your pets & dates</span>
+                <span class="lang-text" data-lang="de">Ihre Tiere & Zeitraum</span>
+              </label>
+              <textarea id="message" name="message" placeholder="Tell me about your pet(s), where you live, and when you need help." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-form">
+              <span class="lang-text" data-lang="en">Send request</span>
+              <span class="lang-text" data-lang="de">Anfrage senden</span>
+            </button>
+
+            <div class="form-note">
+              <span class="icon">ⓘ</span>
+              <span class="lang-text" data-lang="en">
+                Demo only: the form shows a confirmation popup but doesn’t send yet.
+              </span>
+              <span class="lang-text" data-lang="de">
+                Demo: Das Formular zeigt eine Bestätigung, sendet aber noch keine echte Nachricht.
+              </span>
+            </div>
+          </form>
+        </div>
+
+        <div class="pricing-image">
+          <img src="https://images.pexels.com/photos/7210281/pexels-photo-7210281.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dogs in the park with leashes" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Happy clients</span>
+          <span class="lang-text" data-lang="de">Glückliche Kund*innen</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">Happy clients, happy pets</span>
+          <span class="lang-text" data-lang="de">Zufriedene Menschen, zufriedene Tiere</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          Read what other pet parents say about Pawcare and how relaxed they felt while being away.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Lesen Sie, was andere Tierhalter*innen über Pawcare sagen und wie entspannt sie im Urlaub waren.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Anna & Luna</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Cat sitting · 10 days</span>
+                <span class="lang-text" data-lang="de">Katzenbetreuung · 10 Tage</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “We came home to a relaxed, happy cat and a tidy flat. The daily photos made it so easy to enjoy our trip.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Wir kamen zu einer entspannten, glücklichen Katze und einer aufgeräumten Wohnung zurück. Durch die täglichen Fotos konnten wir den Urlaub richtig genießen.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Markus & Balu</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Dog walking · weekly</span>
+                <span class="lang-text" data-lang="de">Gassi-Service · wöchentlich</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “Super reliable. Balu already waits at the door before every walk. We love seeing the GPS routes afterwards.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Sehr zuverlässig. Balu wartet vor jedem Spaziergang schon an der Tür. Die GPS-Routen danach sind super.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Lea & Milo</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Overnight stay</span>
+                <span class="lang-text" data-lang="de">Übernachtbetreuung</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “Our anxious dog ate, slept and played like normal. We finally felt comfortable leaving him overnight.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Unser ängstlicher Hund hat normal gefressen, geschlafen und gespielt. Endlich konnten wir ihn beruhigt über Nacht allein lassen.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/3760852/pexels-photo-3760852.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Jonas & Nala</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Home visits</span>
+                <span class="lang-text" data-lang="de">Hausbesuche</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “Super friendly and on time. Even our shy cat came out to play after two days.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Sehr freundlich und pünktlich. Selbst unsere schüchterne Katze kam nach zwei Tagen zum Spielen heraus.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/1817048/pexels-photo-1817048.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Sophie & Kira</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Day care</span>
+                <span class="lang-text" data-lang="de">Tagesbetreuung</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “Perfect for long office days. Kira comes back relaxed and sleepy, not stressed.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Ideal für lange Büro-Tage. Kira kommt entspannt und müde zurück – nicht gestresst.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+            <div>
+              <div class="testimonial-name">Carlos & Momo</div>
+              <div class="testimonial-meta">
+                <span class="lang-text" data-lang="en">Medication care</span>
+                <span class="lang-text" data-lang="de">Medikamentengabe</span>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text block-lang" data-lang="en">
+            “Momo needs daily medication and everything worked perfectly. We felt safe the whole time.”
+          </p>
+          <p class="testimonial-text block-lang" data-lang="de">
+            „Momo braucht täglich Medikamente und alles hat perfekt funktioniert. Wir fühlten uns die ganze Zeit sicher.“
+          </p>
+          <div class="testimonial-stars">★★★★★</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section team">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Meet your sitter</span>
+          <span class="lang-text" data-lang="de">Lernen Sie Ihren Sitter kennen</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">A small, caring team</span>
+          <span class="lang-text" data-lang="de">Ein kleines, engagiertes Team</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          You’ll always know who is coming to your home – no big agency, just real people who love animals.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Sie wissen immer, wer zu Ihnen nach Hause kommt – keine große Agentur, sondern echte Menschen mit Tierliebe.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman smiling with dog" />
+          <div class="team-name">Heykel</div>
+          <div class="team-role">
+            <span class="lang-text" data-lang="en">Founder · Pet sitter</span>
+            <span class="lang-text" data-lang="de">Gründer · Tiersitter</span>
+          </div>
+          <p class="block-lang" data-lang="en">
+            Dog and cat lover with years of experience and a background in engineering – reliable, structured and warm-hearted.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Hunde- und Katzenfreund mit langjähriger Erfahrung und technischem Hintergrund – zuverlässig, strukturiert und herzlich.
+          </p>
+        </article>
+
+        <article class="team-card">
+          <img src="https://images.pexels.com/photos/5731867/pexels-photo-5731867.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman with cat" />
+          <div class="team-name">Mira</div>
+          <div class="team-role">
+            <span class="lang-text" data-lang="en">Cat care specialist</span>
+            <span class="lang-text" data-lang="de">Katzenexpertin</span>
+          </div>
+          <p class="block-lang" data-lang="en">
+            Special focus on shy indoor cats and medication routines.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Schwerpunkt auf schüchternen Wohnungskatzen und Medikamentengabe.
+          </p>
+        </article>
+
+        <article class="team-card">
+          <img src="https://images.pexels.com/photos/7210270/pexels-photo-7210270.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Man with dog in park" />
+          <div class="team-name">Lukas</div>
+          <div class="team-role">
+            <span class="lang-text" data-lang="en">Dog walker</span>
+            <span class="lang-text" data-lang="de">Hunde-Gassigeher</span>
+          </div>
+          <p class="block-lang" data-lang="en">
+            Loves long walks, new routes and positive training.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Liebt lange Spaziergänge, neue Routen und positive Erziehung.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section cta">
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-title">
+            <span class="lang-text" data-lang="en">Ready to give your pet the best?</span>
+            <span class="lang-text" data-lang="de">Bereit, Ihrem Tier das Beste zu geben?</span>
+          </h2>
+          <p class="cta-text block-lang" data-lang="en">
+            Tell me about your pet and your plans. I’ll reply personally with availability, a price estimate and next steps.
+          </p>
+          <p class="cta-text block-lang" data-lang="de">
+            Erzählen Sie mir von Ihrem Tier und Ihren Plänen. Ich melde mich persönlich mit Verfügbarkeit, Preisvorschlag und den nächsten Schritten.
+          </p>
+          <div class="cta-actions">
+            <button class="btn-cta-primary" onclick="scrollToContact()">
+              <span class="lang-text" data-lang="en">Request a quote</span>
+              <span class="lang-text" data-lang="de">Angebot anfordern</span>
+            </button>
+            <button class="btn-cta-outline" onclick="scrollToPricing()">
+              <span class="lang-text" data-lang="en">View services</span>
+              <span class="lang-text" data-lang="de">Leistungen ansehen</span>
+            </button>
+          </div>
+        </div>
+        <div class="cta-image">
+          <img src="https://images.pexels.com/photos/5731907/pexels-photo-5731907.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Group of happy dogs sitting together" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-title">Pawcare</div>
+        <small class="block-lang" data-lang="en">
+          Modern, reliable pet sitting and dog walking in the Munich area. Bilingual support in English and German.
+        </small>
+        <small class="block-lang" data-lang="de">
+          Moderne, zuverlässige Haustierbetreuung und Gassi-Services im Raum München. Betreuung auf Deutsch und Englisch.
+        </small>
+      </div>
+      <div>
+        <div class="footer-title">
+          <span class="lang-text" data-lang="en">Company</span>
+          <span class="lang-text" data-lang="de">Unternehmen</span>
+        </div>
+        <div class="footer-links">
+          <a href="#why">
+            <span class="lang-text" data-lang="en">About Pawcare</span>
+            <span class="lang-text" data-lang="de">Über Pawcare</span>
+          </a>
+          <a href="#team">
+            <span class="lang-text" data-lang="en">Our team</span>
+            <span class="lang-text" data-lang="de">Unser Team</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">
+          <span class="lang-text" data-lang="en">Support</span>
+          <span class="lang-text" data-lang="de">Support</span>
+        </div>
+        <div class="footer-links">
+          <a href="#pricing">
+            <span class="lang-text" data-lang="en">Pricing</span>
+            <span class="lang-text" data-lang="de">Preise</span>
+          </a>
+          <a href="#contact">
+            <span class="lang-text" data-lang="en">Contact</span>
+            <span class="lang-text" data-lang="de">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Pawcare</span>
+      <span>
+        <span class="lang-text" data-lang="en">Built with ♥ by Heykel.</span>
+        <span class="lang-text" data-lang="de">Mit ♥ erstellt von Heykel.</span>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="icon">✓</span>
+    <span class="lang-text" data-lang="en">Thanks! Your (demo) request was "sent".</span>
+    <span class="lang-text" data-lang="de">Danke! Ihre (Demo-)Anfrage wurde „gesendet“.</span>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth scroll helpers
+    function scrollToContact() {
+      const el = document.getElementById("contact");
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function scrollToPricing() {
+      const el = document.getElementById("pricing");
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // Hero fake submit
+    function handleHeroSubmit(e) {
+      e.preventDefault();
+      showToast();
+      e.target.reset();
+    }
+
+    // Contact form fake submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast();
+      e.target.reset();
+    }
+
+    function showToast() {
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2600);
+    }
+
+    // Language switching
+    const body = document.body;
+    const langButtons = document.querySelectorAll(".lang-btn");
+
+    function setLanguage(lang) {
+      body.setAttribute("data-lang", lang);
+      localStorage.setItem("pawcare-lang", lang);
+      langButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
+      });
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-set-lang");
+        setLanguage(lang);
+      });
+    });
+
+    const savedLang = localStorage.getItem("pawcare-lang");
+    if (savedLang === "en" || savedLang === "de") {
+      setLanguage(savedLang);
+    } else {
+      setLanguage("en");
+    }
+  </script>
+</body>
+</html>
