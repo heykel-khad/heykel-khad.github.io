@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pawcare – Pet Sitting & Dog Walking</title>
-  <meta name="description" content="Pawcare offers loving, reliable pet sitting and dog walking in the Munich area. Bilingual website (English & German), modern design, clear pricing." />
+  <title>Pawcare – Pet Sitting & Dog Walking Marketplace</title>
+  <meta name="description" content="Pawcare is a community marketplace where pet sitters and dog walkers offer their services and pet owners post requests. Bilingual in English & German." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -288,7 +288,7 @@
       }
     }
 
-    .hero-form input {
+    .hero-form select {
       flex: 1;
       border-radius: 999px;
       border: none;
@@ -327,6 +327,25 @@
       font-size: 11px;
       opacity: 0.8;
       margin-top: 10px;
+    }
+
+    .hero-actions {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+
+    .hero-link-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(249,250,251,0.6);
+      background: rgba(15,23,42,0.18);
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 12px;
     }
 
     .hero-image-wrap {
@@ -424,6 +443,55 @@
       margin: 0 auto;
     }
 
+    /* HOW IT WORKS */
+    .how {
+      background: #ffffff;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .how-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .how-card {
+      background: var(--bg-alt);
+      border-radius: 18px;
+      padding: 16px 16px 18px;
+      box-shadow: var(--shadow-subtle);
+      font-size: 13px;
+    }
+
+    .how-step {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: #fbbf24;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .how-card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .how-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     /* WHY CHOOSE (2 columns) */
     .why {
       background: #ffffff;
@@ -442,8 +510,7 @@
       }
     }
 
-    .why-img-large,
-    .why-img-small {
+    .why-img-large {
       border-radius: 24px;
       overflow: hidden;
       box-shadow: var(--shadow-soft);
@@ -451,12 +518,6 @@
 
     .why-img-large img {
       height: 280px;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .why-img-small img {
-      height: 220px;
       width: 100%;
       object-fit: cover;
     }
@@ -748,62 +809,9 @@
       color: #f59e0b;
     }
 
-    /* TEAM */
-    .team {
-      background: #ffffff;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 1024px) {
-      .team-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .team-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .team-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 10px 10px 12px;
-      box-shadow: var(--shadow-subtle);
-      border: 1px solid #e5e7eb;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    .team-card img {
-      border-radius: 14px;
-      height: 210px;
-      width: 100%;
-      object-fit: cover;
-      margin-bottom: 8px;
-    }
-
-    .team-name {
-      font-weight: 600;
-    }
-
-    .team-role {
-      color: var(--muted);
-      font-size: 11px;
-      margin-bottom: 4px;
-    }
-
     /* FINAL CTA */
     .cta {
-      background: var(--bg-alt);
+      background: #ffffff;
     }
 
     .cta-inner {
@@ -1007,8 +1015,8 @@
         <div>
           <div class="logo-text-main">Pawcare</div>
           <div class="logo-text-sub">
-            <span class="lang-text" data-lang="en">Pet Sitting & Dog Walking</span>
-            <span class="lang-text" data-lang="de">Haustierbetreuung & Gassi-Service</span>
+            <span class="lang-text" data-lang="en">Pet Sitting & Dog Walking Marketplace</span>
+            <span class="lang-text" data-lang="de">Plattform für Haustierbetreuung & Gassi-Service</span>
           </div>
         </div>
       </div>
@@ -1016,11 +1024,9 @@
       <div class="nav-center">
         <ul class="nav-links">
           <li><a href="#hero"><span class="lang-text" data-lang="en">Home</span><span class="lang-text" data-lang="de">Start</span></a></li>
-          <li><a href="#why"><span class="lang-text" data-lang="en">Why Pawcare</span><span class="lang-text" data-lang="de">Warum Pawcare</span></a></li>
+          <li><a href="#how"><span class="lang-text" data-lang="en">How it works</span><span class="lang-text" data-lang="de">So funktioniert’s</span></a></li>
           <li><a href="#pricing"><span class="lang-text" data-lang="en">Pricing</span><span class="lang-text" data-lang="de">Preise</span></a></li>
           <li><a href="#testimonials"><span class="lang-text" data-lang="en">Reviews</span><span class="lang-text" data-lang="de">Bewertungen</span></a></li>
-          <li><a href="#team"><span class="lang-text" data-lang="en">Team</span><span class="lang-text" data-lang="de">Team</span></a></li>
-          <li><a href="#contact"><span class="lang-text" data-lang="en">Contact</span><span class="lang-text" data-lang="de">Kontakt</span></a></li>
         </ul>
       </div>
 
@@ -1030,8 +1036,8 @@
           <button class="lang-btn" data-set-lang="de">DE</button>
         </div>
         <button class="btn-nav" onclick="scrollToContact()">
-          <span class="lang-text" data-lang="en">Book now</span>
-          <span class="lang-text" data-lang="de">Jetzt anfragen</span>
+          <span class="lang-text" data-lang="en">Post a request</span>
+          <span class="lang-text" data-lang="de">Gesuch einstellen</span>
         </button>
       </div>
     </nav>
@@ -1041,39 +1047,67 @@
       <div class="hero-inner">
         <div class="hero-pill">
           <span class="tag">New</span>
-          <span class="lang-text" data-lang="en">Trusted pet sitting in the Munich area</span>
-          <span class="lang-text" data-lang="de">Vertrauensvolle Haustierbetreuung im Raum München</span>
+          <span class="lang-text" data-lang="en">A community for sitters, walkers & pet parents</span>
+          <span class="lang-text" data-lang="de">Eine Community für Sitter, Gassigeher & Tierhalter*innen</span>
         </div>
 
         <h1 class="hero-title">
-          <span class="lang-text" data-lang="en">Your Pet’s Home Away From Home</span>
-          <span class="lang-text" data-lang="de">Ein zweites Zuhause für Ihr Tier</span>
+          <span class="lang-text" data-lang="en">Find trusted pet sitters – or offer your own services.</span>
+          <span class="lang-text" data-lang="de">Finden Sie zuverlässige Tiersitter – oder bieten Sie Ihre Dienste an.</span>
         </h1>
 
         <p class="hero-subtitle block-lang" data-lang="en">
-          Providing loving care so your furry friends relax while you’re away. Sit back, enjoy your trip and
-          receive daily updates straight to your phone.
+          Pawcare connects people who love pets. Create a sitter profile to offer walks or overnight stays,
+          or post a request when your pet needs care.
         </p>
         <p class="hero-subtitle block-lang" data-lang="de">
-          Liebevolle Betreuung, damit Ihre Fellfreunde entspannt bleiben, während Sie unterwegs sind.
-          Lehnen Sie sich zurück und erhalten Sie tägliche Updates direkt aufs Handy.
+          Pawcare verbindet Menschen mit Tierliebe. Erstellen Sie ein Sitter-Profil für Spaziergänge oder Übernachtbetreuung
+          – oder stellen Sie ein Gesuch ein, wenn Ihr Tier Betreuung braucht.
         </p>
 
         <form class="hero-form" onsubmit="handleHeroSubmit(event)">
-          <input type="email" placeholder="you@example.com" required />
+          <select required>
+            <option value="" disabled selected>
+              <!-- placeholder text per language -->
+              🔍
+              <span class="lang-text" data-lang="en"></span>
+            </option>
+          </select>
+          <!-- Workaround: we can’t localize placeholder easily, so use a generic one -->
+          <script>
+            // fill select placeholder text based on language
+          </script>
+          <select id="role-select" required>
+            <option value="" disabled selected>
+              <!-- will be set via JS -->
+            </option>
+            <option value="owner" data-en="I have a pet & need a sitter" data-de="Ich habe ein Tier & suche Betreuung"></option>
+            <option value="sitter" data-en="I want to offer pet sitting" data-de="Ich möchte Tiersitting anbieten"></option>
+          </select>
           <button class="btn-hero" type="submit">
-            <span class="lang-text" data-lang="en">Get availability</span>
-            <span class="lang-text" data-lang="de">Verfügbarkeit prüfen</span>
+            <span class="lang-text" data-lang="en">Get started</span>
+            <span class="lang-text" data-lang="de">Jetzt starten</span>
           </button>
         </form>
 
+        <div class="hero-actions">
+          <button class="hero-link-btn" onclick="scrollToHow()">
+            <span class="lang-text" data-lang="en">How Pawcare works</span>
+            <span class="lang-text" data-lang="de">Wie Pawcare funktioniert</span>
+          </button>
+          <button class="hero-link-btn" onclick="scrollToPricing()">
+            <span class="lang-text" data-lang="en">See example prices</span>
+            <span class="lang-text" data-lang="de">Beispielpreise ansehen</span>
+          </button>
+        </div>
+
         <p class="hero-note">
-          <span class="lang-text" data-lang="en">No spam, just one friendly reply from Heykel within 24 hours.</span>
-          <span class="lang-text" data-lang="de">Kein Spam – nur eine freundliche Antwort von Heykel innerhalb von 24 Stunden.</span>
+          <span class="lang-text" data-lang="en">Future feature: real profiles & logins. For now this page explains your idea to visitors.</span>
+          <span class="lang-text" data-lang="de">Zukünftige Funktion: echte Profile & Logins. Aktuell erklärt diese Seite Ihre Idee für Besucher.</span>
         </p>
 
         <div class="hero-image-wrap">
-          <img src="https://images.pexels.com/photos/5486950/pexels-photo-5486950.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Happy woman with dogs on the couch" />
+          <img src="https://images.pexels.com/photos/1452717/pexels-photo-1452717.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Young woman sitting on sofa with happy dog and cat" />
         </div>
       </div>
     </section>
@@ -1083,77 +1117,141 @@
     <!-- BRANDS -->
     <section class="brands">
       <div class="brands-inner">
-        <span class="lang-text" data-lang="en">Trusted by caring pet owners and brands worldwide.</span>
-        <span class="lang-text" data-lang="de">Vertrauen von Tierhalter*innen und Marken weltweit.</span>
+        <span class="lang-text" data-lang="en">Built for everyday pet parents and experienced sitters.</span>
+        <span class="lang-text" data-lang="de">Gemacht für Tierhalter*innen und erfahrene Sitter.</span>
         <div class="brands-logos">
-          <span>Paws&Co</span>
-          <span>HappyPets</span>
-          <span>BlueTail</span>
-          <span>RoyalCare</span>
+          <span>PawFriends</span>
+          <span>HappyWalks</span>
+          <span>CityPets</span>
+          <span>KindPaws</span>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE -->
-    <section id="why" class="section why">
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section how">
       <div class="section-header">
         <div class="section-kicker">
-          <span class="lang-text" data-lang="en">Why choose us</span>
-          <span class="lang-text" data-lang="de">Warum wir</span>
+          <span class="lang-text" data-lang="en">How it works</span>
+          <span class="lang-text" data-lang="de">So funktioniert’s</span>
         </div>
         <h2 class="section-title">
-          <span class="lang-text" data-lang="en">Why Pawcare Babysitting?</span>
-          <span class="lang-text" data-lang="de">Warum Pawcare für Ihr Tier?</span>
+          <span class="lang-text" data-lang="en">A simple platform for pets & people</span>
+          <span class="lang-text" data-lang="de">Eine einfache Plattform für Mensch & Tier</span>
         </h2>
         <p class="section-subtitle block-lang" data-lang="en">
-          We combine professional reliability with a genuinely caring approach – so you and your pet both feel relaxed.
+          In the future, sitters and owners will have their own profiles. For now, you can already explain this flow on your site.
         </p>
         <p class="section-subtitle block-lang" data-lang="de">
-          Wir verbinden professionelle Zuverlässigkeit mit echter Zuneigung – damit Sie und Ihr Tier entspannt sein können.
+          In Zukunft haben Sitter und Halter eigene Profile. Schon jetzt können Sie diesen Ablauf auf Ihrer Seite erklären.
+        </p>
+      </div>
+
+      <div class="how-grid">
+        <article class="how-card">
+          <div class="how-step">1</div>
+          <h3>
+            <span class="lang-text" data-lang="en">Sitters create a profile</span>
+            <span class="lang-text" data-lang="de">Sitter erstellen ein Profil</span>
+          </h3>
+          <p class="block-lang" data-lang="en">
+            Pet sitters and dog walkers describe their experience, upload a picture, set their hourly or nightly rates and mark what animals they accept.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Tiersitter und Gassigeher beschreiben ihre Erfahrung, laden ein Foto hoch, legen Stunden- oder Nachtpreise fest und markieren, welche Tiere sie betreuen.
+          </p>
+        </article>
+
+        <article class="how-card">
+          <div class="how-step">2</div>
+          <h3>
+            <span class="lang-text" data-lang="en">Owners post requests</span>
+            <span class="lang-text" data-lang="de">Tierhalter stellen Gesuche ein</span>
+          </h3>
+          <p class="block-lang" data-lang="en">
+            Pet parents post what they need: walks, home visits, overnight stays or holiday care – including dates, location and details about their pets.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Tierhalter*innen stellen ein, was sie brauchen: Spaziergänge, Hausbesuche, Übernachtbetreuung oder Urlaubsbetreuung – mit Daten, Ort und Infos zum Tier.
+          </p>
+        </article>
+
+        <article class="how-card">
+          <div class="how-step">3</div>
+          <h3>
+            <span class="lang-text" data-lang="en">They match & rate each other</span>
+            <span class="lang-text" data-lang="de">Beide finden sich & bewerten</span>
+          </h3>
+          <p class="block-lang" data-lang="en">
+            Sitters apply to requests, owners choose the best match and afterwards both can leave reviews to build trust in the community.
+          </p>
+          <p class="block-lang" data-lang="de">
+            Sitter bewerben sich auf Gesuche, Halter wählen das beste Match und danach können beide Bewertungen abgeben – für mehr Vertrauen in der Community.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="section why">
+      <div class="section-header">
+        <div class="section-kicker">
+          <span class="lang-text" data-lang="en">Why Pawcare</span>
+          <span class="lang-text" data-lang="de">Warum Pawcare</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-text" data-lang="en">Made for real-life pet sitting</span>
+          <span class="lang-text" data-lang="de">Gemacht für echte Tierbetreuung</span>
+        </h2>
+        <p class="section-subtitle block-lang" data-lang="en">
+          Not an agency – Pawcare is a platform where people help each other with their pets.
+        </p>
+        <p class="section-subtitle block-lang" data-lang="de">
+          Keine Agentur – Pawcare ist eine Plattform, auf der Menschen sich gegenseitig mit ihren Tieren unterstützen.
         </p>
       </div>
 
       <div class="why-grid">
         <div class="why-img-large">
-          <img src="https://images.pexels.com/photos/7210260/pexels-photo-7210260.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman hugging dog by the window" />
+          <img src="https://images.pexels.com/photos/7210271/pexels-photo-7210271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Man lying on couch with dog and laptop" />
         </div>
         <div class="why-text-block">
           <div class="why-item">
             <h3>
-              <span class="lang-text" data-lang="en">Personalized care for every pet</span>
-              <span class="lang-text" data-lang="de">Individuelle Betreuung für jedes Tier</span>
+              <span class="lang-text" data-lang="en">Profiles with real experience</span>
+              <span class="lang-text" data-lang="de">Profile mit echter Erfahrung</span>
             </h3>
             <p class="block-lang" data-lang="en">
-              From playful puppies to shy senior cats – I adapt routines, playtime and walks to your pet’s unique personality.
+              Sitters can list how many pets they’ve already cared for, what training they have and which services they offer (walks, visits, overnights).
             </p>
             <p class="block-lang" data-lang="de">
-              Vom verspielten Welpen bis zur schüchternen Senior-Katze – ich passe Abläufe, Spielzeit und Spaziergänge an den Charakter Ihres Tieres an.
+              Sitter können angeben, wie viele Tiere sie bereits betreut haben, welche Schulungen sie haben und welche Dienste sie anbieten (Spaziergänge, Besuche, Übernachtungen).
             </p>
           </div>
 
           <div class="why-item">
             <h3>
-              <span class="lang-text" data-lang="en">Experienced & insured sitter</span>
-              <span class="lang-text" data-lang="de">Erfahrener & versicherter Sitter</span>
+              <span class="lang-text" data-lang="en">Requests for any situation</span>
+              <span class="lang-text" data-lang="de">Gesuche für jede Situation</span>
             </h3>
             <p class="block-lang" data-lang="en">
-              Over 4 years of hands-on experience with dogs, cats and small animals, plus full insurance and basic emergency training.
+              Owners can create detailed posts when they need help: a daily dog walk, weekend cat care or a full holiday stay at the sitter’s home.
             </p>
             <p class="block-lang" data-lang="de">
-              Über 4 Jahre praktische Erfahrung mit Hunden, Katzen und Kleintieren – dazu Versicherungsschutz und Grundkenntnisse in Notfallmaßnahmen.
+              Halter können detaillierte Gesuche einstellen: tägliche Gassi-Runde, Wochenendbetreuung für die Katze oder komplette Urlaubsbetreuung beim Sitter.
             </p>
           </div>
 
           <div class="why-item">
             <h3>
-              <span class="lang-text" data-lang="en">Clear communication & updates</span>
-              <span class="lang-text" data-lang="de">Klare Kommunikation & Updates</span>
+              <span class="lang-text" data-lang="en">Community ratings & trust</span>
+              <span class="lang-text" data-lang="de">Community-Bewertungen & Vertrauen</span>
             </h3>
             <p class="block-lang" data-lang="en">
-              You receive friendly photo and video updates after every visit or walk – so you always know how your pet is doing.
+              After each stay, both sides leave a rating. Over time, sitters build a history that shows how many bookings they’ve completed.
             </p>
             <p class="block-lang" data-lang="de">
-              Nach jedem Besuch oder Spaziergang erhalten Sie freundliche Foto- und Videoupdates – so wissen Sie immer, wie es Ihrem Tier geht.
+              Nach jedem Auftrag bewerten sich beide Seiten. So entsteht eine Historie, die zeigt, wie viele Buchungen ein Sitter bereits erfolgreich abgeschlossen hat.
             </p>
           </div>
         </div>
@@ -1164,98 +1262,98 @@
     <section class="section gallery">
       <div class="section-header">
         <div class="section-kicker">
-          <span class="lang-text" data-lang="en">Our commitment</span>
-          <span class="lang-text" data-lang="de">Unser Versprechen</span>
+          <span class="lang-text" data-lang="en">For all kinds of pets</span>
+          <span class="lang-text" data-lang="de">Für alle Arten von Haustieren</span>
         </div>
         <h2 class="section-title">
-          <span class="lang-text" data-lang="en">Happy, relaxed pets – every time</span>
-          <span class="lang-text" data-lang="de">Glückliche, entspannte Tiere – jedes Mal</span>
+          <span class="lang-text" data-lang="en">Dogs, cats & small animals welcome</span>
+          <span class="lang-text" data-lang="de">Hunde, Katzen & Kleintiere willkommen</span>
         </h2>
         <p class="section-subtitle block-lang" data-lang="en">
-          We treat every animal as if they were our own – with patience, kindness and lots of play.
+          Pawcare is focused on everyday pets – no dolphins, no exotic wildlife – just the companions that live in our homes.
         </p>
         <p class="section-subtitle block-lang" data-lang="de">
-          Wir behandeln jedes Tier, als wäre es unser eigenes – mit Geduld, Freundlichkeit und ganz viel Spielzeit.
+          Pawcare konzentriert sich auf unsere Alltagsbegleiter – keine Delfine, keine Wildtiere – sondern die Tiere, die mit uns zu Hause leben.
         </p>
       </div>
 
       <div class="gallery-grid">
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/9773281/pexels-photo-9773281.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog running on the beach" />
-          <strong>Daily</strong>
-          <span class="lang-text" data-lang="en">Fresh air & movement</span>
-          <span class="lang-text" data-lang="de">Frische Luft & Bewegung</span>
+          <img src="https://images.pexels.com/photos/7210292/pexels-photo-7210292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog being walked in the city" />
+          <strong>Dog walking</strong>
+          <span class="lang-text" data-lang="en">Solo or group walks in your area</span>
+          <span class="lang-text" data-lang="de">Einzel- oder Gruppenspaziergänge in Ihrer Gegend</span>
         </article>
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/4588012/pexels-photo-4588012.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog and cat together" />
-          <strong>Safe</strong>
-          <span class="lang-text" data-lang="en">Comfortable at home</span>
-          <span class="lang-text" data-lang="de">Geborgen zu Hause</span>
+          <img src="https://images.pexels.com/photos/6869641/pexels-photo-6869641.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Person cuddling cat" />
+          <strong>Home visits</strong>
+          <span class="lang-text" data-lang="en">Short check-ins for food & cuddles</span>
+          <span class="lang-text" data-lang="de">Kurze Besuche für Futter & Kuscheln</span>
         </article>
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cat playing" />
-          <strong>Play</strong>
-          <span class="lang-text" data-lang="en">Mental stimulation</span>
-          <span class="lang-text" data-lang="de">Geistige Auslastung</span>
+          <img src="https://images.pexels.com/photos/5731863/pexels-photo-5731863.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog sleeping with woman" />
+          <strong>Overnight stays</strong>
+          <span class="lang-text" data-lang="en">Pets stay in a cosy home instead of a kennel</span>
+          <span class="lang-text" data-lang="de">Tiere schlafen in einem gemütlichen Zuhause statt im Zwinger</span>
         </article>
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/5731860/pexels-photo-5731860.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog portrait" />
-          <strong>Care</strong>
-          <span class="lang-text" data-lang="en">Gentle handling</span>
-          <span class="lang-text" data-lang="de">Liebevolle Betreuung</span>
+          <img src="https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Rabbit in living room" />
+          <strong>Small pets</strong>
+          <span class="lang-text" data-lang="en">Rabbits, guinea pigs & more</span>
+          <span class="lang-text" data-lang="de">Kaninchen, Meerschweinchen & mehr</span>
         </article>
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog at park" />
-          <strong>Fun</strong>
-          <span class="lang-text" data-lang="en">New smells & routes</span>
-          <span class="lang-text" data-lang="de">Neue Wege & Gerüche</span>
+          <img src="https://images.pexels.com/photos/4588396/pexels-photo-4588396.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog in park with ball" />
+          <strong>Fun & play</strong>
+          <span class="lang-text" data-lang="en">Sitters can log walks and playtime</span>
+          <span class="lang-text" data-lang="de">Sitter können Spaziergänge & Spielzeiten dokumentieren</span>
         </article>
         <article class="gallery-card">
-          <img src="https://images.pexels.com/photos/3820609/pexels-photo-3820609.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Rabbit" />
-          <strong>Gentle</strong>
-          <span class="lang-text" data-lang="en">Small pets welcome</span>
-          <span class="lang-text" data-lang="de">Auch Kleintiere willkommen</span>
+          <img src="https://images.pexels.com/photos/4588060/pexels-photo-4588060.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cat sitting on sofa with person" />
+          <strong>Relaxed at home</strong>
+          <span class="lang-text" data-lang="en">Perfect for indoor cats and seniors</span>
+          <span class="lang-text" data-lang="de">Ideal für Wohnungskatzen & Senioren</span>
         </article>
       </div>
     </section>
 
-    <!-- PRICING + FORM -->
+    <!-- PRICING + FORM (still just contact) -->
     <section id="pricing" class="section pricing">
       <div class="section-header">
         <div class="section-kicker">
-          <span class="lang-text" data-lang="en">Transparent pricing</span>
-          <span class="lang-text" data-lang="de">Transparente Preise</span>
+          <span class="lang-text" data-lang="en">Example pricing</span>
+          <span class="lang-text" data-lang="de">Beispielpreise</span>
         </div>
         <h2 class="section-title">
-          <span class="lang-text" data-lang="en">Simple, clear packages</span>
-          <span class="lang-text" data-lang="de">Einfache, klare Pakete</span>
+          <span class="lang-text" data-lang="en">Sitters set their own rates</span>
+          <span class="lang-text" data-lang="de">Sitter legen ihre Preise selbst fest</span>
         </h2>
         <p class="section-subtitle block-lang" data-lang="en">
-          No surprises – you always know what’s included. Tell me what you need and I’ll send a tailored offer.
+          Below are typical prices you might see on the platform. For now, use this form so people can contact you directly.
         </p>
         <p class="section-subtitle block-lang" data-lang="de">
-          Keine Überraschungen – Sie wissen immer, was enthalten ist. Schreiben Sie mir, was Sie brauchen, und ich sende Ihnen ein individuelles Angebot.
+          Unten sehen Sie typische Preise, die es auf der Plattform geben könnte. Aktuell dient das Formular dazu, dass Interessierte Sie direkt kontaktieren.
         </p>
       </div>
 
       <div class="pricing-grid">
         <div class="pricing-card" id="contact">
           <h3>
-            <span class="lang-text" data-lang="en">Request your personal quote</span>
-            <span class="lang-text" data-lang="de">Persönliches Angebot anfordern</span>
+            <span class="lang-text" data-lang="en">Get in touch about Pawcare</span>
+            <span class="lang-text" data-lang="de">Kontakt zu Pawcare aufnehmen</span>
           </h3>
           <ul class="pricing-list">
             <li>
-              <span class="lang-text" data-lang="en"><strong>Home visits</strong> from €15 / visit</span>
-              <span class="lang-text" data-lang="de"><strong>Hausbesuche</strong> ab 15 € / Besuch</span>
+              <span class="lang-text" data-lang="en"><strong>Dog walks</strong> · usually €15–25 per walk</span>
+              <span class="lang-text" data-lang="de"><strong>Gassi-Runden</strong> · meist 15–25 € pro Spaziergang</span>
             </li>
             <li>
-              <span class="lang-text" data-lang="en"><strong>Dog walks</strong> from €18 / walk</span>
-              <span class="lang-text" data-lang="de"><strong>Gassi-Service</strong> ab 18 € / Spaziergang</span>
+              <span class="lang-text" data-lang="en"><strong>Home visits</strong> · usually €15–25 per visit</span>
+              <span class="lang-text" data-lang="de"><strong>Hausbesuche</strong> · meist 15–25 € pro Besuch</span>
             </li>
             <li>
-              <span class="lang-text" data-lang="en"><strong>Overnight stays</strong> from €65 / night</span>
-              <span class="lang-text" data-lang="de"><strong>Übernacht-Betreuung</strong> ab 65 € / Nacht</span>
+              <span class="lang-text" data-lang="en"><strong>Overnight stays</strong> · usually €50–80 per night</span>
+              <span class="lang-text" data-lang="de"><strong>Übernachtbetreuung</strong> · meist 50–80 € pro Nacht</span>
             </li>
           </ul>
 
@@ -1263,8 +1361,8 @@
             <div class="form-row">
               <div class="field-group">
                 <label for="name">
-                  <span class="lang-text" data-lang="en">First & last name</span>
-                  <span class="lang-text" data-lang="de">Vor- & Nachname</span>
+                  <span class="lang-text" data-lang="en">Name</span>
+                  <span class="lang-text" data-lang="de">Name</span>
                 </label>
                 <input id="name" name="name" type="text" placeholder="z.B. Anna Müller" required />
               </div>
@@ -1276,54 +1374,55 @@
 
             <div class="form-row">
               <div class="field-group">
-                <label for="phone">
-                  <span class="lang-text" data-lang="en">Phone (optional)</span>
-                  <span class="lang-text" data-lang="de">Telefon (optional)</span>
+                <label for="role">
+                  <span class="lang-text" data-lang="en">I am...</span>
+                  <span class="lang-text" data-lang="de">Ich bin...</span>
                 </label>
-                <input id="phone" name="phone" type="tel" placeholder="+49 ..." />
+                <select id="role" name="role">
+                  <option>
+                    <span class="lang-text" data-lang="en"></span>
+                  </option>
+                  <option>Pet owner / Tierhalter*in</option>
+                  <option>Pet sitter / Tiersitter*in</option>
+                  <option>Both / Beides</option>
+                </select>
               </div>
               <div class="field-group">
-                <label for="service">
-                  <span class="lang-text" data-lang="en">Service</span>
-                  <span class="lang-text" data-lang="de">Leistung</span>
+                <label for="location">
+                  <span class="lang-text" data-lang="en">City / area</span>
+                  <span class="lang-text" data-lang="de">Stadt / Gegend</span>
                 </label>
-                <select id="service" name="service">
-                  <option>Home visits / Hausbesuche</option>
-                  <option>Dog walking / Gassi-Service</option>
-                  <option>Overnight stays / Übernacht-Betreuung</option>
-                  <option>Medication / Spezialpflege</option>
-                  <option>Not sure yet / Noch unsicher</option>
-                </select>
+                <input id="location" name="location" type="text" placeholder="z.B. München West" />
               </div>
             </div>
 
             <div class="field-group">
               <label for="message">
-                <span class="lang-text" data-lang="en">Your pets & dates</span>
-                <span class="lang-text" data-lang="de">Ihre Tiere & Zeitraum</span>
+                <span class="lang-text" data-lang="en">Your message</span>
+                <span class="lang-text" data-lang="de">Ihre Nachricht</span>
               </label>
-              <textarea id="message" name="message" placeholder="Tell me about your pet(s), where you live, and when you need help." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell me if you want to use Pawcare, test it, or join as one of the first sitters."></textarea>
             </div>
 
             <button type="submit" class="btn-form">
-              <span class="lang-text" data-lang="en">Send request</span>
-              <span class="lang-text" data-lang="de">Anfrage senden</span>
+              <span class="lang-text" data-lang="en">Send message</span>
+              <span class="lang-text" data-lang="de">Nachricht senden</span>
             </button>
 
             <div class="form-note">
               <span class="icon">ⓘ</span>
               <span class="lang-text" data-lang="en">
-                Demo only: the form shows a confirmation popup but doesn’t send yet.
+                Demo only: this form shows a confirmation popup but doesn’t send yet.
               </span>
               <span class="lang-text" data-lang="de">
-                Demo: Das Formular zeigt eine Bestätigung, sendet aber noch keine echte Nachricht.
+                Demo: Dieses Formular zeigt eine Bestätigung, sendet aber noch keine echte Nachricht.
               </span>
             </div>
           </form>
         </div>
 
         <div class="pricing-image">
-          <img src="https://images.pexels.com/photos/7210281/pexels-photo-7210281.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dogs in the park with leashes" />
+          <img src="https://images.pexels.com/photos/7210790/pexels-photo-7210790.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Several dogs on leashes in a park" />
         </div>
       </div>
     </section>
@@ -1332,18 +1431,18 @@
     <section id="testimonials" class="section testimonials">
       <div class="section-header">
         <div class="section-kicker">
-          <span class="lang-text" data-lang="en">Happy clients</span>
-          <span class="lang-text" data-lang="de">Glückliche Kund*innen</span>
+          <span class="lang-text" data-lang="en">Future community</span>
+          <span class="lang-text" data-lang="de">Künftige Community</span>
         </div>
         <h2 class="section-title">
-          <span class="lang-text" data-lang="en">Happy clients, happy pets</span>
-          <span class="lang-text" data-lang="de">Zufriedene Menschen, zufriedene Tiere</span>
+          <span class="lang-text" data-lang="en">Imagine reviews like these</span>
+          <span class="lang-text" data-lang="de">Stellen Sie sich solche Bewertungen vor</span>
         </h2>
         <p class="section-subtitle block-lang" data-lang="en">
-          Read what other pet parents say about Pawcare and how relaxed they felt while being away.
+          These are example testimonials to show how sitters and owners could rate each other on Pawcare.
         </p>
         <p class="section-subtitle block-lang" data-lang="de">
-          Lesen Sie, was andere Tierhalter*innen über Pawcare sagen und wie entspannt sie im Urlaub waren.
+          Dies sind Beispiel-Bewertungen, die zeigen, wie sich Sitter und Halter später auf Pawcare gegenseitig bewerten könnten.
         </p>
       </div>
 
@@ -1352,18 +1451,18 @@
           <div class="testimonial-top">
             <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
             <div>
-              <div class="testimonial-name">Anna & Luna</div>
+              <div class="testimonial-name">Anna (pet owner)</div>
               <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Cat sitting · 10 days</span>
-                <span class="lang-text" data-lang="de">Katzenbetreuung · 10 Tage</span>
+                <span class="lang-text" data-lang="en">Cat · 7 nights</span>
+                <span class="lang-text" data-lang="de">Katze · 7 Nächte</span>
               </div>
             </div>
           </div>
           <p class="testimonial-text block-lang" data-lang="en">
-            “We came home to a relaxed, happy cat and a tidy flat. The daily photos made it so easy to enjoy our trip.”
+            “Our sitter had over 20 completed bookings and amazing reviews. I felt safe leaving Luna at home for the first time.”
           </p>
           <p class="testimonial-text block-lang" data-lang="de">
-            „Wir kamen zu einer entspannten, glücklichen Katze und einer aufgeräumten Wohnung zurück. Durch die täglichen Fotos konnten wir den Urlaub richtig genießen.“
+            „Unser Sitter hatte schon über 20 abgeschlossene Buchungen und tolle Bewertungen. Zum ersten Mal konnte ich Luna beruhigt zu Hause lassen.“
           </p>
           <div class="testimonial-stars">★★★★★</div>
         </article>
@@ -1372,18 +1471,18 @@
           <div class="testimonial-top">
             <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
             <div>
-              <div class="testimonial-name">Markus & Balu</div>
+              <div class="testimonial-name">Markus (sitter)</div>
               <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Dog walking · weekly</span>
-                <span class="lang-text" data-lang="de">Gassi-Service · wöchentlich</span>
+                <span class="lang-text" data-lang="en">Dog walker</span>
+                <span class="lang-text" data-lang="de">Gassigeher</span>
               </div>
             </div>
           </div>
           <p class="testimonial-text block-lang" data-lang="en">
-            “Super reliable. Balu already waits at the door before every walk. We love seeing the GPS routes afterwards.”
+            “I could finally show my experience and how many walks I’ve done. New clients now find me through my profile.”
           </p>
           <p class="testimonial-text block-lang" data-lang="de">
-            „Sehr zuverlässig. Balu wartet vor jedem Spaziergang schon an der Tür. Die GPS-Routen danach sind super.“
+            „Endlich kann ich meine Erfahrung und die Anzahl meiner Spaziergänge zeigen. Neue Kund*innen finden mich jetzt über mein Profil.“
           </p>
           <div class="testimonial-stars">★★★★★</div>
         </article>
@@ -1392,147 +1491,20 @@
           <div class="testimonial-top">
             <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
             <div>
-              <div class="testimonial-name">Lea & Milo</div>
+              <div class="testimonial-name">Lea (pet owner)</div>
               <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Overnight stay</span>
-                <span class="lang-text" data-lang="de">Übernachtbetreuung</span>
+                <span class="lang-text" data-lang="en">Anxious dog</span>
+                <span class="lang-text" data-lang="de">Ängstlicher Hund</span>
               </div>
             </div>
           </div>
           <p class="testimonial-text block-lang" data-lang="en">
-            “Our anxious dog ate, slept and played like normal. We finally felt comfortable leaving him overnight.”
+            “Filters for experience with anxious dogs made it easy to find someone who really understood Milo.”
           </p>
           <p class="testimonial-text block-lang" data-lang="de">
-            „Unser ängstlicher Hund hat normal gefressen, geschlafen und gespielt. Endlich konnten wir ihn beruhigt über Nacht allein lassen.“
+            „Mit den Filtern für Erfahrung mit ängstlichen Hunden habe ich schnell jemanden gefunden, der Milo wirklich versteht.“
           </p>
           <div class="testimonial-stars">★★★★★</div>
-        </article>
-
-        <article class="testimonial-card">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/3760852/pexels-photo-3760852.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
-            <div>
-              <div class="testimonial-name">Jonas & Nala</div>
-              <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Home visits</span>
-                <span class="lang-text" data-lang="de">Hausbesuche</span>
-              </div>
-            </div>
-          </div>
-          <p class="testimonial-text block-lang" data-lang="en">
-            “Super friendly and on time. Even our shy cat came out to play after two days.”
-          </p>
-          <p class="testimonial-text block-lang" data-lang="de">
-            „Sehr freundlich und pünktlich. Selbst unsere schüchterne Katze kam nach zwei Tagen zum Spielen heraus.“
-          </p>
-          <div class="testimonial-stars">★★★★★</div>
-        </article>
-
-        <article class="testimonial-card">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/1817048/pexels-photo-1817048.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
-            <div>
-              <div class="testimonial-name">Sophie & Kira</div>
-              <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Day care</span>
-                <span class="lang-text" data-lang="de">Tagesbetreuung</span>
-              </div>
-            </div>
-          </div>
-          <p class="testimonial-text block-lang" data-lang="en">
-            “Perfect for long office days. Kira comes back relaxed and sleepy, not stressed.”
-          </p>
-          <p class="testimonial-text block-lang" data-lang="de">
-            „Ideal für lange Büro-Tage. Kira kommt entspannt und müde zurück – nicht gestresst.“
-          </p>
-          <div class="testimonial-stars">★★★★★</div>
-        </article>
-
-        <article class="testimonial-card">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
-            <div>
-              <div class="testimonial-name">Carlos & Momo</div>
-              <div class="testimonial-meta">
-                <span class="lang-text" data-lang="en">Medication care</span>
-                <span class="lang-text" data-lang="de">Medikamentengabe</span>
-              </div>
-            </div>
-          </div>
-          <p class="testimonial-text block-lang" data-lang="en">
-            “Momo needs daily medication and everything worked perfectly. We felt safe the whole time.”
-          </p>
-          <p class="testimonial-text block-lang" data-lang="de">
-            „Momo braucht täglich Medikamente und alles hat perfekt funktioniert. Wir fühlten uns die ganze Zeit sicher.“
-          </p>
-          <div class="testimonial-stars">★★★★★</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team" class="section team">
-      <div class="section-header">
-        <div class="section-kicker">
-          <span class="lang-text" data-lang="en">Meet your sitter</span>
-          <span class="lang-text" data-lang="de">Lernen Sie Ihren Sitter kennen</span>
-        </div>
-        <h2 class="section-title">
-          <span class="lang-text" data-lang="en">A small, caring team</span>
-          <span class="lang-text" data-lang="de">Ein kleines, engagiertes Team</span>
-        </h2>
-        <p class="section-subtitle block-lang" data-lang="en">
-          You’ll always know who is coming to your home – no big agency, just real people who love animals.
-        </p>
-        <p class="section-subtitle block-lang" data-lang="de">
-          Sie wissen immer, wer zu Ihnen nach Hause kommt – keine große Agentur, sondern echte Menschen mit Tierliebe.
-        </p>
-      </div>
-
-      <div class="team-grid">
-        <article class="team-card">
-          <img src="https://images.pexels.com/photos/4587998/pexels-photo-4587998.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman smiling with dog" />
-          <div class="team-name">Heykel</div>
-          <div class="team-role">
-            <span class="lang-text" data-lang="en">Founder · Pet sitter</span>
-            <span class="lang-text" data-lang="de">Gründer · Tiersitter</span>
-          </div>
-          <p class="block-lang" data-lang="en">
-            Dog and cat lover with years of experience and a background in engineering – reliable, structured and warm-hearted.
-          </p>
-          <p class="block-lang" data-lang="de">
-            Hunde- und Katzenfreund mit langjähriger Erfahrung und technischem Hintergrund – zuverlässig, strukturiert und herzlich.
-          </p>
-        </article>
-
-        <article class="team-card">
-          <img src="https://images.pexels.com/photos/5731867/pexels-photo-5731867.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Woman with cat" />
-          <div class="team-name">Mira</div>
-          <div class="team-role">
-            <span class="lang-text" data-lang="en">Cat care specialist</span>
-            <span class="lang-text" data-lang="de">Katzenexpertin</span>
-          </div>
-          <p class="block-lang" data-lang="en">
-            Special focus on shy indoor cats and medication routines.
-          </p>
-          <p class="block-lang" data-lang="de">
-            Schwerpunkt auf schüchternen Wohnungskatzen und Medikamentengabe.
-          </p>
-        </article>
-
-        <article class="team-card">
-          <img src="https://images.pexels.com/photos/7210270/pexels-photo-7210270.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Man with dog in park" />
-          <div class="team-name">Lukas</div>
-          <div class="team-role">
-            <span class="lang-text" data-lang="en">Dog walker</span>
-            <span class="lang-text" data-lang="de">Hunde-Gassigeher</span>
-          </div>
-          <p class="block-lang" data-lang="en">
-            Loves long walks, new routes and positive training.
-          </p>
-          <p class="block-lang" data-lang="de">
-            Liebt lange Spaziergänge, neue Routen und positive Erziehung.
-          </p>
         </article>
       </div>
     </section>
@@ -1542,23 +1514,23 @@
       <div class="cta-inner">
         <div>
           <h2 class="cta-title">
-            <span class="lang-text" data-lang="en">Ready to give your pet the best?</span>
-            <span class="lang-text" data-lang="de">Bereit, Ihrem Tier das Beste zu geben?</span>
+            <span class="lang-text" data-lang="en">Want to bring this platform to life?</span>
+            <span class="lang-text" data-lang="de">Möchten Sie diese Plattform Wirklichkeit werden lassen?</span>
           </h2>
           <p class="cta-text block-lang" data-lang="en">
-            Tell me about your pet and your plans. I’ll reply personally with availability, a price estimate and next steps.
+            Use this page as your concept landing page now. Later you can add real logins, profiles and messages with a developer or no-code tools.
           </p>
           <p class="cta-text block-lang" data-lang="de">
-            Erzählen Sie mir von Ihrem Tier und Ihren Plänen. Ich melde mich persönlich mit Verfügbarkeit, Preisvorschlag und den nächsten Schritten.
+            Nutzen Sie diese Seite jetzt als Konzept-Landingpage. Später können Sie mit einem Developer oder No-Code-Tools echte Logins, Profile und Nachrichten ergänzen.
           </p>
           <div class="cta-actions">
             <button class="btn-cta-primary" onclick="scrollToContact()">
-              <span class="lang-text" data-lang="en">Request a quote</span>
-              <span class="lang-text" data-lang="de">Angebot anfordern</span>
+              <span class="lang-text" data-lang="en">Let people contact you</span>
+              <span class="lang-text" data-lang="de">Kontaktformular nutzen</span>
             </button>
-            <button class="btn-cta-outline" onclick="scrollToPricing()">
-              <span class="lang-text" data-lang="en">View services</span>
-              <span class="lang-text" data-lang="de">Leistungen ansehen</span>
+            <button class="btn-cta-outline" onclick="scrollToHow()">
+              <span class="lang-text" data-lang="en">Show them how it works</span>
+              <span class="lang-text" data-lang="de">Ablauf zeigen</span>
             </button>
           </div>
         </div>
@@ -1575,41 +1547,37 @@
       <div>
         <div class="footer-title">Pawcare</div>
         <small class="block-lang" data-lang="en">
-          Modern, reliable pet sitting and dog walking in the Munich area. Bilingual support in English and German.
+          A future marketplace where pet sitters and dog walkers offer their services and pet parents post requests.
         </small>
         <small class="block-lang" data-lang="de">
-          Moderne, zuverlässige Haustierbetreuung und Gassi-Services im Raum München. Betreuung auf Deutsch und Englisch.
+          Eine zukünftige Plattform, auf der Tiersitter und Gassigeher ihre Dienste anbieten und Tierhalter*innen Gesuche einstellen.
         </small>
       </div>
       <div>
         <div class="footer-title">
-          <span class="lang-text" data-lang="en">Company</span>
-          <span class="lang-text" data-lang="de">Unternehmen</span>
+          <span class="lang-text" data-lang="en">Explore</span>
+          <span class="lang-text" data-lang="de">Entdecken</span>
         </div>
         <div class="footer-links">
-          <a href="#why">
-            <span class="lang-text" data-lang="en">About Pawcare</span>
-            <span class="lang-text" data-lang="de">Über Pawcare</span>
+          <a href="#how">
+            <span class="lang-text" data-lang="en">How it works</span>
+            <span class="lang-text" data-lang="de">So funktioniert’s</span>
           </a>
-          <a href="#team">
-            <span class="lang-text" data-lang="en">Our team</span>
-            <span class="lang-text" data-lang="de">Unser Team</span>
+          <a href="#pricing">
+            <span class="lang-text" data-lang="en">Example pricing</span>
+            <span class="lang-text" data-lang="de">Beispielpreise</span>
           </a>
         </div>
       </div>
       <div>
         <div class="footer-title">
-          <span class="lang-text" data-lang="en">Support</span>
-          <span class="lang-text" data-lang="de">Support</span>
+          <span class="lang-text" data-lang="en">Contact</span>
+          <span class="lang-text" data-lang="de">Kontakt</span>
         </div>
         <div class="footer-links">
-          <a href="#pricing">
-            <span class="lang-text" data-lang="en">Pricing</span>
-            <span class="lang-text" data-lang="de">Preise</span>
-          </a>
           <a href="#contact">
-            <span class="lang-text" data-lang="en">Contact</span>
-            <span class="lang-text" data-lang="de">Kontakt</span>
+            <span class="lang-text" data-lang="en">Message form</span>
+            <span class="lang-text" data-lang="de">Kontaktformular</span>
           </a>
         </div>
       </div>
@@ -1618,8 +1586,8 @@
     <div class="footer-bottom">
       <span>© <span id="year"></span> Pawcare</span>
       <span>
-        <span class="lang-text" data-lang="en">Built with ♥ by Heykel.</span>
-        <span class="lang-text" data-lang="de">Mit ♥ erstellt von Heykel.</span>
+        <span class="lang-text" data-lang="en">Concept page created by Heykel.</span>
+        <span class="lang-text" data-lang="de">Konzeptseite erstellt von Heykel.</span>
       </span>
     </div>
   </footer>
@@ -1648,11 +1616,16 @@
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
+    function scrollToHow() {
+      const el = document.getElementById("how");
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     // Hero fake submit
     function handleHeroSubmit(e) {
       e.preventDefault();
       showToast();
-      e.target.reset();
     }
 
     // Contact form fake submit
@@ -1680,6 +1653,18 @@
       langButtons.forEach(btn => {
         btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
       });
+      // update select placeholder text
+      const roleSelect = document.getElementById("role-select");
+      if (roleSelect) {
+        const options = roleSelect.querySelectorAll("option[data-en]");
+        const placeholder = roleSelect.querySelector("option[value='']");
+        if (placeholder) {
+          placeholder.textContent = lang === "de" ? "Bitte auswählen..." : "Please choose...";
+        }
+        options.forEach(opt => {
+          opt.textContent = lang === "de" ? opt.getAttribute("data-de") : opt.getAttribute("data-en");
+        });
+      }
     }
 
     langButtons.forEach(btn => {
